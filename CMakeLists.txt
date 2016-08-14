@@ -38,7 +38,10 @@ set(civet_web_static_headers
 include_directories(./include)
 
 #this builds the civetweb dynamic library
-add_library(civet_web MODULE ${civet_web_sources}  ${civet_web_headers})
+add_library(civet_web 
+	${civet_web_sources}  
+	${civet_web_headers}
+)
 
 #this builds the civetweb static library
 add_library(civet_web_static  ${civet_web_static_sources} ${civet_web_static_headers})
