@@ -39,6 +39,9 @@ set(CIVET_WEB_INC_FOLDER ${CMAKE_CURRENT_LIST_DIR}/include CACHE INTERNAL "this 
 include_directories(./include)
 include_directories(${CIVET_WEB_INC_FOLDER})
 
+#add support for websockets into the compiled civetweb
+add_definitions(-DUSE_WEBSOCKET)
+
 #this builds the civetweb dynamic library
 add_library(civet_web 
 	${civet_web_sources}  
